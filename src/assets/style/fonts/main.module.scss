@@ -9,16 +9,16 @@
 
 // Default font ==============================================================================================================================================================================================================================================================================
 
-$fontFamily: "";
+$fontFamily: "San Francisco Display";
 
 // An example of connecting a font ====================================================================================================
 
 @font-face {
-  //font-family: '';
-  //src: url('../../fonts/') format('woff2'),
-  //url('../../fonts/') format('woff');
-  //font-weight: normal;
-  //font-style: normal;
-  //font-display: swap;
+  font-family: 'San Francisco Display';
+  src: url('../../fonts/SanFranciscoDisplay-Regular.woff2') format('woff2'),
+  url('../../fonts/SanFranciscoDisplay-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 

@@ -6,23 +6,23 @@
 
 
 // Connection of mixins ===========================================================================================================================================================================================================================================================================
-@import "base/mixins";
+@import "base/mixins.module";
 
 // Connection of fonts ==============================================================================================================================================================================================================================================================================
-@import "fonts/main";
+@import "fonts/main.module";
 
-$fontSize: rem(14); // where 14(px) is the default font size from the layout
+$fontSize: rem(12); // where 14(px) is the default font size from the layout
 
-@import "base/colors";
+@import "base/colors.module";
 
 // Adaptive grid settings ===============================================================================================================================================================================================================================================================================================
 
 // Minimum page width
 $minWidth: 320;
 // Canvas width (layout)
-$maxWidth: 1920;
+$maxWidth: 1512;
 // Width of bounding container (0 = no bounding)
-$maxWidthContainer: 1170;
+$maxWidthContainer: 1488;
 // Total indentation of the container
 // (30 = 15px left and right, 0 = no indentation)
 $containerPadding: 30;
@@ -45,7 +45,7 @@ $responsiveType: 1;
 // ============================================================================================================================================================================================================================================================================================================================================================================================
 
 // Reset ============================================================================================================================================================================================== =============================================================================================== ===============================================================================================
-@import "base/null";
+@import "base/null.module";
 
 // BODY tag styles ============================================================================================================================================================================================================================================================================================================================================================================================
 
@@ -70,6 +70,58 @@ body {
   }
 }
 
-// Connection of container ======================================================================================================================================================================================================================
 
-@import "base/container";
+// Working with a bounding container ======================================================================================================================================================================================================================
+
+/*
+(i) Styles will be applied to
+to all classes containing *__container
+For example header__container, main__container etc.
+*/
+.Container {
+  max-width: rem(980);
+  margin: 0 auto;
+}
+
+@if ($responsiveType==1) {
+  // Responsive
+  .ContainerBig {
+    @if ($maxWidthContainer>0) {
+      max-width: rem($containerWidth);
+      margin: 0 auto;
+    }
+    @if ($containerPadding>0) {
+      @if ($maxWidthContainer>0) {
+        padding: 0 rem(math.div($containerPadding, 2));
+      } @else {
+        @include adaptiveValue("padding-left", math.div($containerPadding, 2), 15);
+        @include adaptiveValue("padding-right", math.div($containerPadding, 2), 15);
+      }
+    }
+  }
+} @else {
+  // By break points
+  .Container {
+    margin: 0 auto;
+    @if ($maxWidthContainer>0) {
+      max-width: rem($containerWidth);
+    } @else {
+      @if ($containerPadding>0) {
+        padding: 0 rem(math.div($containerPadding, 2));
+      }
+    }
+    @media (max-width: $pc) {
+      max-width: rem(970);
+    }
+    @media (max-width: $tablet) {
+      max-width: rem(750);
+    }
+    @media (max-width: $mobile) {
+      max-width: none;
+      @if ($containerPadding>0 and $maxWidthContainer>0) {
+        padding: 0 rem(math.div($containerPadding, 2));
+      }
+    }
+  }
+}
+

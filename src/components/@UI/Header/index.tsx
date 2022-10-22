@@ -1,9 +1,12 @@
 import React from 'react';
+import {Container} from "../Container";
 
 const Index = () => {
     return (
         <header>
-            Header
+            <Container>
+                Header
+            </Container>
         </header>
     );
 };

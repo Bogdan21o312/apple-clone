@@ -1,4 +1,4 @@
-# Getting Started with react-assembly-2022
+# apple-clone
 
 ## Available Scripts
 

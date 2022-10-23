@@ -4,6 +4,8 @@ import classes from "./Home.module.scss"
 import Layout from "../../components/@UI/Layout";
 import {Text} from "../../components/@UI/Text";
 import {Link} from "react-router-dom";
+import Center from "../../components/@UI/Center";
+import MaxWidth from "../../components/@UI/MaxWidth";
 
 const Index = () => {
     const {data: test, isLoading, error} = testAPI.useFetchAllTestQuery('')
@@ -27,9 +29,13 @@ const Index = () => {
             {/*<LinkTo to={''}>*/}
             {/*    Lorem ipsum dolor sit amet, consectetur adipisicing*/}
             {/*</LinkTo>*/}
-            <Text logo={true} size={'small'}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium in iusto minus ratione reiciendis? Ab, aliquam, animi assumenda debitis iste laudantium obcaecati odit qui quibusdam quis ratione repudiandae sunt veniam!
-            </Text>
+            <Center>
+                <MaxWidth>
+                    <Text logo={true} size={'small'}>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium in iusto minus ratione reiciendis? Ab, aliquam, animi assumenda debitis iste laudantium obcaecati odit qui quibusdam quis ratione repudiandae sunt veniam!
+                    </Text>
+                </MaxWidth>
+            </Center>
         </Layout>
     );
 };

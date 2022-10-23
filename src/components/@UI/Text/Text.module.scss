@@ -13,11 +13,12 @@
 // Logo ====================================================================================================
 
 .Logo {
-  @include adaptiveValue("width", 60, 30);
-  @include adaptiveValue("height", 60, 30);
-
+  min-width: rem(30);
+  min-height: rem(30);
   path {
     fill: $mainColor;
+    @include adaptiveValue("width", 60, 30);
+    @include adaptiveValue("height", 60, 30);
   }
 }
 

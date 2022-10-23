@@ -1,0 +1,70 @@
+@use "sass:math";
+@import "src/assets/style/Style.module";
+
+// Base Style ====================================================================================================
+
+.Base {
+  display: flex;
+  @include adaptiveValue("gap", 20, 10);
+  row-gap: rem(10);
+  align-items: center;
+}
+
+// Logo ====================================================================================================
+
+.Logo {
+  @include adaptiveValue("width", 60, 30);
+  @include adaptiveValue("height", 60, 30);
+
+  path {
+    fill: $mainColor;
+  }
+}
+
+// Big sizes ====================================================================================================
+
+.Big {
+
+  @include adaptiveValue("font-size", 56, 34);
+  line-height: math.div(60, 56);
+  font-weight: 700;
+  letter-spacing: 0.018rem;
+
+}
+
+// Medium sizes ====================================================================================================
+
+.Medium {
+  @include adaptiveValue("font-size", 28, 20);
+  line-height: math.div(31, 28);
+  letter-spacing: 0.0107rem;
+
+}
+
+// Small sizes ====================================================================================================
+
+.Small {
+  @include adaptiveValue("font-size", 21, 20);
+  line-height: math.div(29, 21);
+  letter-spacing: 0.014rem;
+}
+
+// Colors ====================================================================================================
+
+.Orange {
+  color: $orangeColor;
+}
+
+.Red {
+  color: $redColor;
+}
+
+.Blue {
+  color: $blueColor;
+}
+
+// Remove ====================================================================================================
+
+.Remove {
+  display: none;
+}

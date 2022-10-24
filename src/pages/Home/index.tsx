@@ -6,20 +6,21 @@ import {Text} from "../../components/@UI/Text";
 import {Link} from "react-router-dom";
 import Center from "../../components/@UI/Center";
 import MaxWidth from "../../components/@UI/MaxWidth";
+import Loader from "../../components/@UI/Loader";
 
 const Index = () => {
     const {data: test, isLoading, error} = testAPI.useFetchAllTestQuery('')
 
     return (
         <Layout>
-            {/*{isLoading && <h1>Loading...</h1>}*/}
-            {/*{error && <h2>Error...</h2>}*/}
-            {/*{test && test.map(test =>*/}
-            {/*    <div key={test.id}>*/}
-            {/*        {test.id}*/}
-            {/*        {test.body}*/}
-            {/*    </div>*/}
-            {/*)}*/}
+            {isLoading && <Loader size={'big'}/>}
+            {error && <h2>Error...</h2>}
+            {test && test.map(test =>
+                <div key={test.id}>
+                    {test.id}
+                    {test.body}
+                </div>
+            )}
             {/*<Title color={''} logo={true}>*/}
             {/*    Lorem ipsum dolor sit amet, consectetur adipisicing*/}
             {/*</Title>*/}

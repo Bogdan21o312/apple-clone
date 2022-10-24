@@ -20,8 +20,8 @@ const Index: FC<NavbarProps> = ({menuActive}) => {
     return (
         <nav className={`${classes.menuBody} ${menuActive ? classes.menuOpen : ''}`}>
             <ul className={classes.menuList}>
-                {navbar && navbar.map(link =>
-                    <li className={classes.menuItem}>
+                {navbar && navbar.map((link, index) =>
+                    <li key={index} className={classes.menuItem}>
                         <Link to={link.path} className={classes.menuLink}>
                             {link.title}
                         </Link>

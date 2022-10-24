@@ -4,6 +4,7 @@ import Navbar from "../Navbar";
 import {Link} from "react-router-dom";
 import classes from "./Header.module.scss"
 import {Logo, Search, Suitcase} from "../../../assets/images/config";
+import {HOME_URL} from "../../../router/config";
 
 const Index = () => {
 
@@ -32,9 +33,9 @@ const Index = () => {
                         </div>
                     </div>
                     <div className={classes.headerMenu}>
-                        <a className={classes.headerLogo}>
+                        <Link to={HOME_URL} className={classes.headerLogo}>
                             <Logo/>
-                        </a>
+                        </Link>
                         <Navbar menuActive={menuActive}/>
                         <div className={classes.headerIcons}>
                             <Suitcase/>

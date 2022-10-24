@@ -1,5 +1,6 @@
 import React, {FC, ReactNode} from 'react';
 import {ContainerBig} from "../Container";
+import classes from "./Main.module.scss"
 
 interface MainProps {
     children: ReactNode
@@ -7,7 +8,7 @@ interface MainProps {
 
 const Index:FC<MainProps> = ({children}) => {
     return (
-        <main>
+        <main className={classes.Page}>
             <ContainerBig>
                 {children}
             </ContainerBig>

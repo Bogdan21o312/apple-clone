@@ -1,0 +1,182 @@
+@use "sass:math";
+@import "src/assets/style/Style.module";
+
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  transition: all 0.3s ease 0s;
+  background: rgba(0, 0, 0, 0.8);
+
+  &.headerScroll {
+  }
+
+  &Content {
+    display: flex;
+  }
+
+  &Logo {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    @media (any-hover: hover) {
+      &:hover {
+        svg {
+          opacity: 1;
+        }
+      }
+    }
+
+    svg {
+      width: rem(15);
+      height: rem(15);
+      fill: $lightColor;
+      opacity: 0.8;
+      transition: all 0.3s ease 0s;
+    }
+
+    @media (max-width: $mobile) {
+        svg {
+          width: rem(30);
+          height: rem(30);
+          z-index: 50;
+        }
+    }
+  }
+
+  &Icons {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    @include adaptiveValue("margin-left", 20, 10);
+    height: 100%;
+    width: 100%;
+    @media (any-hover: hover) {
+      &:hover {
+        svg {
+          opacity: 1;
+        }
+      }
+    }
+
+    svg {
+      width: rem(15);
+      height: rem(15);
+      transition: all 0.3s ease 0s;
+      opacity: 0.8;
+      color: $lightColor;
+    }
+    @media (max-width: $mobile) {
+      margin-left: 0;
+      width: auto;
+      svg {
+        width: rem(20);
+        height: rem(20);
+      }
+    }
+  }
+
+  &Menu {
+    margin: 0 auto;
+    display: grid;
+    align-items: center;
+    grid-template-columns: rem(60) 1fr rem(60);
+    row-gap: rem(10);
+    @include adaptiveValue("column-gap", 12, 12);
+
+    &:first-child {
+      @include adaptiveValue("margin-right", 20, 10);
+    }
+
+    @media (max-width: $mobile) {
+      margin: auto;
+      grid-template-columns: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 100%;
+
+    }
+  }
+
+  &Action {
+    @media (max-width: $mobile) {
+      display: flex;
+      gap: rem(16);
+      align-items: center;
+      position: relative;
+      z-index: 5;
+      margin-left: auto;
+    }
+  }
+}
+
+//====================================================================================================
+
+
+//Burger
+
+.iconMenu {
+  display: none;
+  @media (max-width: $mobile) {
+    display: block;
+    position: relative;
+    width: rem(48);
+    height: rem(48);
+    transition: all 0.25s;
+    cursor: pointer;
+    z-index: 5;
+    &::before,
+    &::after {
+      content: "";
+      right: 0;
+      position: absolute;
+      left: rem(15);
+      width: rem(18);
+      height: rem(1);
+      background: $whiteColor;
+      transform: rotate(0);
+      transition: all 0.25s;
+    }
+    &::before {
+      top: rem(23);
+      transform: translateY(-3px);
+    }
+    &::after {
+      bottom: rem(23);
+      transform: translateY(3px);
+    }
+  }
+}
+
+
+.menuOpen {
+  transform: rotate(90deg);
+
+  .lock & {
+    overflow: hidden;
+    touch-action: none;
+    overscroll-behavior: none;
+  }
+}
+
+.iconMenu.menuOpen {
+
+  &::before,
+  &::after {
+  }
+
+  &::before {
+    transform: rotate(-45deg) translateY(0);
+  }
+
+  &::after {
+    transform: rotate(45deg) translateY(0);
+  }
+}

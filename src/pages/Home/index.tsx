@@ -29,13 +29,13 @@ const Index = () => {
             {/*<LinkTo to={''}>*/}
             {/*    Lorem ipsum dolor sit amet, consectetur adipisicing*/}
             {/*</LinkTo>*/}
-            <Center>
-                <MaxWidth>
-                    <Text logo={true} size={'small'}>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium in iusto minus ratione reiciendis? Ab, aliquam, animi assumenda debitis iste laudantium obcaecati odit qui quibusdam quis ratione repudiandae sunt veniam!
-                    </Text>
-                </MaxWidth>
-            </Center>
+            {/*<Center>*/}
+                {/*<MaxWidth>*/}
+                {/*    <Text logo={true} size={'small'}>*/}
+                {/*        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium in iusto minus ratione reiciendis? Ab, aliquam, animi assumenda debitis iste laudantium obcaecati odit qui quibusdam quis ratione repudiandae sunt veniam!*/}
+                {/*    </Text>*/}
+                {/*</MaxWidth>*/}
+            {/*</Center>*/}
         </Layout>
     );
 };

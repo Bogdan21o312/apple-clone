@@ -81,11 +81,12 @@ For example header__container, main__container etc.
 .Container {
   max-width: rem(980);
   margin: 0 auto;
+  width: 100%;
 }
 
 @if ($responsiveType==1) {
   // Responsive
-  .ContainerBig {
+  .Container {
     @if ($maxWidthContainer>0) {
       max-width: rem($containerWidth);
       margin: 0 auto;

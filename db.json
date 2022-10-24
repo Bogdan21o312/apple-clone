@@ -87,5 +87,118 @@
       "title": "Support",
       "path": "/support"
     }
+  ],
+  "newsFooter": [
+    {
+      "id": 1,
+      "text": "1. iPhone 8 or later users may subscribe without an Apple Watch later this fall.\n"
+    },
+    {
+      "id": 2,
+      "text": "A subscription is required for Apple Fitness+.\n"
+    },
+    {
+      "id": 3,
+      "text": "Apple Fitness+ requires iOS 14.3 or later, iPadOS 14.3 or later, watchOS 7.2 or later, and tvOS 14.3 or later.\n"
+    },
+    {
+      "id": 4,
+      "text": "To get the newest features, make sure your devices are running the latest software version.\n"
+    },
+    {
+      "id": 5,
+      "text": "To access and use all the features of Apple Card, you must add Apple Card to Wallet on an iPhone or iPad with the latest version of iOS or iPadOS. Update to the latest version by going to Settings > General > Software Update. Tap Download and Install.\n"
+    },
+    {
+      "id": 6,
+      "text": "Available for qualifying applicants in the United States.\n"
+    },
+    {
+      "id": 7,
+      "text": "Apple Card is issued by Goldman Sachs Bank USA, Salt Lake City Branch.\n"
+    },
+    {
+      "id": 8,
+      "text": "Learn more about how Apple Card applications are evaluated at support.apple.com/kb/HT209218."
+    }
+  ],
+  "columnFooter": [
+    {
+      "id": 1,
+      "title": "Shop and Learn",
+      "categories": [
+        {
+          "text": "Mac\n",
+          "path": "/mac"
+        },
+        {
+          "text": "iPad\n",
+          "path": "/ipad"
+        },
+        {
+          "text": "iPhone\n",
+          "path": "/iphone"
+        },
+        {
+          "text": "Watch\n",
+          "path": "/watch"
+        },
+        {
+          "text": "AirPods\n",
+          "path": "/airpods"
+        },
+        {
+          "text": "TV & Home\n",
+          "path": "/home"
+        },
+        {
+          "text": "AirTag\n",
+          "path": "/onlyonapple"
+        },
+        {
+          "text": "Accessories\n",
+          "path": "/accessories"
+        },
+        {
+          "text": "Gift Cards",
+          "path": "/support"
+        }
+      ]
+    }
+  ],
+  "bottomFooter": [
+    {
+      "upstairs": "More ways to shop: Find an Apple Store or other retailer near you.\nOr call 1-800-MY-APPLE."
+    },
+    {
+      "groundFloor": [
+        {
+          "first": "Copyright © 2022 Apple Inc. All rights reserved."
+        },
+        {
+          "pages": [
+            {
+              "title": "Privacy Policy"
+            },
+            {
+              "title": "Terms of Use"
+            },
+            {
+              "title": "Sales and Refunds"
+            },
+            {
+              "title": "Legal"
+            },
+            {
+              "title": "Site Map"
+            }
+          ]
+        },
+        {
+          "country": "United States"
+        }
+      ]
+    }
   ]
 }
+

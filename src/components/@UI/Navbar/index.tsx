@@ -2,13 +2,15 @@ import React, {FC, useEffect} from 'react';
 import classes from "./Navbar.module.scss"
 import {Link} from "react-router-dom";
 import {Search} from "../../../assets/images/config";
+import {navbarAPI} from "../../../sevices/NavbarService";
 
 interface NavbarProps {
     menuActive: any,
 }
 
 const Index: FC<NavbarProps> = ({menuActive}) => {
-    React.useEffect(() => {
+    const {data: navbar} = navbarAPI.useFetchAllTestQuery('')
+    useEffect(() => {
         if (menuActive) {
             document.body.style.overflow = 'hidden'
         } else {
@@ -18,36 +20,13 @@ const Index: FC<NavbarProps> = ({menuActive}) => {
     return (
         <nav className={`${classes.menuBody} ${menuActive ? classes.menuOpen : ''}`}>
             <ul className={classes.menuList}>
-                <li className={classes.menuItem}>
-                    <a className={classes.menuLink}>
-                        text
-                    </a>
-                </li>
-                <li className={classes.menuItem}>
-                    <a className={classes.menuLink}>
-                        text
-                    </a>
-                </li>
-                <li className={classes.menuItem}>
-                    <a className={classes.menuLink}>
-                        text
-                    </a>
-                </li>
-                <li className={classes.menuItem}>
-                    <a className={classes.menuLink}>
-                        text
-                    </a>
-                </li>
-                <li className={classes.menuItem}>
-                    <a className={classes.menuLink}>
-                        text
-                    </a>
-                </li>
-                <li className={classes.menuItem}>
-                    <a className={classes.menuLink}>
-                        text
-                    </a>
-                </li>
+                {navbar && navbar.map(link =>
+                    <li className={classes.menuItem}>
+                        <Link to={link.path} className={classes.menuLink}>
+                            {link.title}
+                        </Link>
+                    </li>
+                )}
                 <li className={classes.menuItem}>
                     <a className={classes.menuLink}>
                         <Search/>

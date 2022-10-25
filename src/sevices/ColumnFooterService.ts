@@ -6,10 +6,15 @@ export const columnFooterAPI = createApi({
     reducerPath: 'columnFooterAPI',
     baseQuery: fetchBaseQuery({baseUrl: BASE_URL}),
     endpoints: (build) => ({
-        fetchAllTest: build.query<IColumnFooter[], any>({
+        fetchAllTitle: build.query<IColumnFooter[], any>({
             query: () => ({
-                url: '/columnFooter'
+                url: '/titleColumnFooter'
             })
-        })
+        }),
+        fetchAllLink: build.query<IColumnFooter[], any>({
+            query: () => ({
+                url: '/linkColumnFooter'
+            })
+        }),
     })
 })

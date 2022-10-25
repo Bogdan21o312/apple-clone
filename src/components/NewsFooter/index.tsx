@@ -1,17 +1,17 @@
 import React from 'react';
 import classes from "./NewsFooter.module.scss"
-import {newsFooterAPI} from "../../sevices/NewsFooterService";
 import Loader from "../@UI/Loader";
+import {FooterAPI} from "../../sevices/FooterService";
 
 const Index = () => {
-    const {data: paragraph, isLoading} = newsFooterAPI.useFetchAllNewsFooterQuery('')
+    const {data: text, isLoading} = FooterAPI.useFetchAllNewsFooterQuery('')
     return (
         <div className={classes.footerNews}>
             {isLoading
                 ? <Loader size={'big'}/>
                 :
                 <div>
-                    {paragraph && paragraph.map((paragraph, index) =>
+                    {text && text.map((paragraph, index) =>
                         <p key={index}>
                             {paragraph.text}
                         </p>

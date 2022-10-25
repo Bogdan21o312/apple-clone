@@ -6,7 +6,7 @@ export const newsFooterAPI = createApi({
     reducerPath: 'newsFooterAPI',
     baseQuery: fetchBaseQuery({baseUrl: BASE_URL}),
     endpoints: (build) => ({
-        fetchAllTest: build.query<INewsFooter[], any>({
+        fetchAllNewsFooter: build.query<INewsFooter[], any>({
             query: () => ({
                 url: '/newsFooter'
             })

@@ -6,7 +6,7 @@ export const navbarAPI = createApi({
     reducerPath: 'navbarAPI',
     baseQuery: fetchBaseQuery({baseUrl: BASE_URL}),
     endpoints: (build) => ({
-        fetchAllTest: build.query<INavbar[], any>({
+        fetchAllNavbar: build.query<INavbar[], any>({
             query: () => ({
                 url: '/navbar'
             })

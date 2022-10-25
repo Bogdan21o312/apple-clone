@@ -9,7 +9,7 @@ interface NavbarProps {
 }
 
 const Index: FC<NavbarProps> = ({menuActive}) => {
-    const {data: navbar} = navbarAPI.useFetchAllTestQuery('')
+    const {data: navbar} = navbarAPI.useFetchAllNavbarQuery('')
     useEffect(() => {
         if (menuActive) {
             document.body.style.overflow = 'hidden'

@@ -122,48 +122,47 @@
       "text": "Learn more about how Apple Card applications are evaluated at support.apple.com/kb/HT209218."
     }
   ],
-  "columnFooter": [
+  "titleColumnFooter": [
     {
       "id": 1,
-      "title": "Shop and Learn",
-      "categories": [
-        {
-          "text": "Mac\n",
-          "path": "/mac"
-        },
-        {
-          "text": "iPad\n",
-          "path": "/ipad"
-        },
-        {
-          "text": "iPhone\n",
-          "path": "/iphone"
-        },
-        {
-          "text": "Watch\n",
-          "path": "/watch"
-        },
-        {
-          "text": "AirPods\n",
-          "path": "/airpods"
-        },
-        {
-          "text": "TV & Home\n",
-          "path": "/home"
-        },
-        {
-          "text": "AirTag\n",
-          "path": "/onlyonapple"
-        },
-        {
-          "text": "Accessories\n",
-          "path": "/accessories"
-        },
-        {
-          "text": "Gift Cards",
-          "path": "/support"
-        }
-      ]
+      "title": "Shop and Learn"
+    }
+  ],
+  "linkColumnFooter": [
+    {
+      "text": "Mac\n",
+      "path": "/mac"},
+    {
+      "text": "iPad\n",
+      "path": "/ipad"
+    },
+    {
+      "text": "iPhone\n",
+      "path": "/iphone"
+    },
+    {
+      "text": "Watch\n",
+      "path": "/watch"
+    },
+    {
+      "text": "AirPods\n",
+      "path": "/airpods"
+    },
+    {
+      "text": "TV & Home\n",
+      "path": "/home"
+    },
+    {
+      "text": "AirTag\n",
+      "path": "/onlyonapple"
+    },
+    {
+      "text": "Accessories\n",
+      "path": "/accessories"
+    },
+    {
+      "text": "Gift Cards",
+      "path": "/support"
     }
   ],
   "bottomFooter": [

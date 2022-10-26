@@ -1,0 +1,43 @@
+@import "src/assets/style/Style.module";
+
+.RepresentationText {
+  @include adaptiveValue("padding-top", 50, 20);
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  @media (max-width: em(479.98)){
+      padding: rem(10);
+  }
+  &Big {
+    display: flex;
+    justify-content: center;
+    &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 22, 18);
+    }
+  }
+  &SubTitle {
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 20, 16);
+    }
+  }
+  &Medium {
+    display: flex;
+    justify-content: center;
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 20, 16);
+    }
+  }
+  &Links {
+    display: flex;
+    justify-content: center;
+    @include adaptiveValue("gap", 30, 20);
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 18, 12);
+    }
+  }
+}

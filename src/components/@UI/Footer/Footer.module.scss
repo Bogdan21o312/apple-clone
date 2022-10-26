@@ -1,1 +1,6 @@
 @import "src/assets/style/Style.module";
+
+.Footer {
+  background-color: $lightColor;
+  @include adaptiveValue("padding", 12, 8);
+}

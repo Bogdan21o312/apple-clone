@@ -1,0 +1,9 @@
+@import "src/assets/style/Style.module";
+
+.Line {
+  background-color: $darkColor;
+  height: rem(1);
+  opacity: 0.5;
+  @include adaptiveValue("margin-top", 20, 10);
+  @include adaptiveValue("margin-bottom", 20, 10);
+}

@@ -142,7 +142,7 @@
     },
     {
       "text": "TV & Home\n",
-      "path": "/home"
+      "path": "/tv&home"
     },
     {
       "text": "AirTag\n",
@@ -180,6 +180,10 @@
       "title": "Site Map"
     }
   ],
-  "countryFooter": ["United States"]
+  "countryFooter": [
+    {
+      "name": "United States"
+    }
+  ]
 }
 

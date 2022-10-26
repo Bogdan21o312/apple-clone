@@ -1,0 +1,32 @@
+@import "src/assets/style/Style.module";
+
+.BottomFooter {
+  display: flex;
+
+  &Content {
+    &Main {
+    }
+
+    &Lower {
+      display: flex;
+    }
+
+    &Page {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      span {
+        background-color: $darkColor;
+        height: 100%;
+        opacity: 0.5;
+        width: rem(1);
+        display: block;
+        @include adaptiveValue("margin-right", 30, 15);
+        @include adaptiveValue("margin-left", 30, 15);
+      }
+    }
+
+    &Country {
+    }
+  }
+}

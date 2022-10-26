@@ -1,0 +1,25 @@
+@import "src/assets/style/Style.module";
+
+.ColumnFooter {
+  @include adaptiveValue("margin-top", 20, 10);
+  flex-wrap: wrap;
+  display: flex;
+  &Content {
+    @include adaptiveValue("gap", 40, 10);
+    row-gap: rem(10);
+    &Title {
+      &:not(:last-child) {
+        margin-bottom: rem(10);
+      }
+
+      h2 {
+        font-weight: 700;
+      }
+
+    }
+
+    &Link {
+      margin-bottom: rem(10);
+    }
+  }
+}

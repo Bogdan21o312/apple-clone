@@ -12,15 +12,15 @@ const Index = () => {
             {isLoading
                 ? <Loader size={'medium'}/>
                 :
-                <div>
+                <div className={classes.ColumnFooterContent}>
                     {columnTitle && columnTitle.map((column, index) =>
-                        <div key={index}>
+                        <div className={classes.ColumnFooterContentTitle} key={index}>
                             <h2>{column.title}</h2>
                         </div>
                     )}
                     {columnLink && columnLink.map((link, index) =>
-                        <Link to={link.path} key={index}>
-                            <p>{link.text}</p>
+                        <Link className={classes.ColumnFooterContentItem} to={link.path} key={index}>
+                            <div className={classes.ColumnFooterContentLink}>{link.text}</div>
                         </Link>
                     )}
                 </div>

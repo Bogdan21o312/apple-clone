@@ -14,5 +14,5 @@ export interface IBottomFooter {
 }
 
 export interface ICountryFooter {
-    countryFooter: string
+    name: string
 }

@@ -6,12 +6,10 @@ interface MainProps {
     children: ReactNode
 }
 
-const Index:FC<MainProps> = ({children}) => {
+const Index: FC<MainProps> = ({children}) => {
     return (
         <main className={classes.Page}>
-            <ContainerBig>
-                {children}
-            </ContainerBig>
+            {children}
         </main>
     );
 };

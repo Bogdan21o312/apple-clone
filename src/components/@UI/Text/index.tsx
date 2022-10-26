@@ -18,7 +18,7 @@ export const Text: FC<TextProps> = ({children, to, color, logo, size}) => {
     return (
         to
             ?
-            <Link to={to} className={`${classes.Base}${Size}`}>
+            <Link to={to} className={`${classes.Base} ${Size} ${classes.Link}`}>
                 <Logo className={`${LogoApple}`}/>
                 <span className={`${Color}`}>{children}</span>
             </Link>

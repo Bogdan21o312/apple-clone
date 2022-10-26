@@ -10,11 +10,23 @@
   align-items: center;
 }
 
+// Link Style ====================================================================================================
+
+.Link {
+  transition: all 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
 // Logo ====================================================================================================
 
 .Logo {
   min-width: rem(30);
   min-height: rem(30);
+
   path {
     fill: $mainColor;
     @include adaptiveValue("width", 60, 30);
@@ -26,7 +38,7 @@
 
 .Big {
 
-  @include adaptiveValue("font-size", 56, 34);
+  @include adaptiveValue("font-size", 56, 54);
   line-height: math.div(60, 56);
   font-weight: 700;
   letter-spacing: 0.018rem;
@@ -36,7 +48,7 @@
 // Medium sizes ====================================================================================================
 
 .Medium {
-  @include adaptiveValue("font-size", 28, 20);
+  @include adaptiveValue("font-size", 28, 24);
   line-height: math.div(31, 28);
   letter-spacing: 0.0107rem;
 

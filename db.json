@@ -184,6 +184,86 @@
     {
       "name": "United States"
     }
+  ],
+  "homeRepresentation": [
+    {
+      "logo": false,
+      "mainColor": "",
+      "textBig": "iPhone 14",
+      "textSubTitle": "",
+      "colorSubTitle": "",
+      "textMedium": "Big and bigger.",
+      "firstLink": "Learn more",
+      "firstLinkTo": "/",
+      "lastLink": "Buy",
+      "lastLinkTo": "/",
+      "imgUrl": "/img/pages/home/phone14.png"
+    },
+    {
+      "logo": true,
+      "mainColor": "white",
+      "textBig": "iPhone 14 Pro",
+      "textSubTitle": "",
+      "colorSubTitle": "",
+      "textMedium": "Pro. Beyond.",
+      "firstLink": "Learn more",
+      "firstLinkTo": "/",
+      "lastLink": "Buy",
+      "lastLinkTo": "/",
+      "imgUrl": "/img/pages/home/phone14pro.png"
+    },
+    {
+      "logo": true,
+      "maimColor": "",
+      "textBig": "WATCH",
+      "textSubTitle": "ULTRA",
+      "colorSubTitle": "orange",
+      "textMedium": "Adventure awaits.",
+      "firstLink": "Learn more",
+      "firstLinkTo": "/",
+      "lastLink": "Buy",
+      "lastLinkTo": "/",
+      "imgUrl": "/img/pages/home/watchultra.png"
+    },
+    {
+      "logo": false,
+      "maimColor": "",
+      "textBig": "",
+      "textSubTitle": "",
+      "colorSubTitle": "",
+      "textMedium": "",
+      "firstLink": "",
+      "firstLinkTo": "/",
+      "lastLink": "",
+      "lastLinkTo": "/",
+      "imgUrl": "/img/pages/home/"
+    },
+    {
+      "logo": false,
+      "maimColor": "",
+      "textBig": "",
+      "textSubTitle": "",
+      "colorSubTitle": "",
+      "textMedium": "",
+      "firstLink": "",
+      "firstLinkTo": "/",
+      "lastLink": "",
+      "lastLinkTo": "/",
+      "imgUrl": "src/assets/images/page/home"
+    },
+    {
+      "logo": false,
+      "maimColor": "",
+      "textBig": "",
+      "textSubTitle": "",
+      "colorSubTitle": "",
+      "textMedium": "",
+      "firstLink": "",
+      "firstLinkTo": "/",
+      "lastLink": "",
+      "lastLinkTo": "/",
+      "imgUrl": "src/assets/images/page/home"
+    }
   ]
 }
 

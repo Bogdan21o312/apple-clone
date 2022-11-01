@@ -24,13 +24,14 @@
 // Logo ====================================================================================================
 
 .Logo {
-  min-width: rem(30);
-  min-height: rem(30);
+  @include adaptiveValue("min-width", 60, 50);
+  @include adaptiveValue("min-height", 60, 50);
+  @media (max-width: em(767.98)) {
+    display: none;
+  }
 
   path {
     fill: $mainColor;
-    @include adaptiveValue("width", 60, 30);
-    @include adaptiveValue("height", 60, 30);
   }
 }
 
@@ -80,4 +81,19 @@
 
 .Remove {
   display: none;
+}
+
+// White theme ====================================================================================================
+
+
+.White .Blue {
+  color: $lightblueColor;
+}
+
+.White {
+  color: $lightColor;
+
+  path {
+    fill: $lightColor;
+  }
 }

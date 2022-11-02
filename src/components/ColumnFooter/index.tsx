@@ -2,11 +2,11 @@ import React from 'react';
 import classes from "./ColumnFooter.module.scss"
 import Loader from "../@UI/Loader";
 import {Link} from "react-router-dom";
-import {FooterAPI} from "../../sevices/FooterService";
+import {footerAPI} from "../../sevices/FooterService";
 
 const Index = () => {
-    const {data: columnTitle, isLoading} = FooterAPI.useFetchAllTitleQuery('')
-    const {data: columnLink} = FooterAPI.useFetchAllLinkQuery('')
+    const {data: columnTitle, isLoading} = footerAPI.useFetchAllTitleQuery('')
+    const {data: columnLink} = footerAPI.useFetchAllLinkQuery('')
     return (
         <div className={classes.ColumnFooter}>
             {isLoading

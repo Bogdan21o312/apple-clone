@@ -4,21 +4,9 @@ import {Text} from "../@UI/Text";
 import FullScreen from "../@UI/FullScreen";
 import classes from "./Representation.module.scss"
 import MaxWidth from "../@UI/MaxWidth";
+import {IRepresentation} from "../../models/IRepresentation";
 
-interface RepresentationProps {
-    logo?: boolean
-    imgUrl: string
-    textBig: string
-    textSubTitle?: string
-    colorSubTitle?: string
-    textMedium: string
-    firstLink: string
-    firstLinkTo: string
-    lastLink: string
-    lastLinkTo: string
-}
-
-const Index: FC<RepresentationProps> = ({...props}) => {
+const Index: FC<IRepresentation> = ({...props}) => {
     return (
         <FullScreen>
             <Ibg>
@@ -26,7 +14,7 @@ const Index: FC<RepresentationProps> = ({...props}) => {
                 <div className={classes.RepresentationText}>
                     <MaxWidth>
                         <div className={classes.RepresentationTextBig}>
-                            <Text size={'big'} logo={props.logo}>
+                            <Text mainColor={props.mainColor} size={'big'} logo={props.logo}>
                                 {props.textBig}
                             </Text>
                         </div>
@@ -36,15 +24,15 @@ const Index: FC<RepresentationProps> = ({...props}) => {
                             </Text>
                         </div>
                         <div className={classes.RepresentationTextMedium}>
-                            <Text size={'medium'}>
+                            <Text mainColor={props.mainColor} size={'medium'}>
                                 {props.textMedium}
                             </Text>
                         </div>
                         <div className={classes.RepresentationTextLinks}>
-                            <Text size={'small'} color={'blue'} to={props.firstLinkTo}>
+                            <Text mainColor={props.mainColor} size={'small'} color={'blue'} to={props.firstLinkTo}>
                                 {props.firstLink}
                             </Text>
-                            <Text size={'small'} color={'blue'} to={props.lastLinkTo}>
+                            <Text mainColor={props.mainColor} size={'small'} color={'blue'} to={props.lastLinkTo}>
                                 {props.lastLink}
                             </Text>
                         </div>

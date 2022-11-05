@@ -2,8 +2,8 @@ import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/dist/query/react";
 import {BASE_URL} from "../config";
 import {IBottomFooter, ICountryFooter, ILinkColumnFooter, ITextFooter} from "../models/IFooter";
 
-export const FooterAPI = createApi({
-    reducerPath: 'FooterAPI',
+export const footerAPI = createApi({
+    reducerPath: 'footerAPI',
     baseQuery: fetchBaseQuery({baseUrl: BASE_URL}),
     endpoints: (build) => ({
         fetchAllNewsFooter: build.query<ITextFooter[], any>({

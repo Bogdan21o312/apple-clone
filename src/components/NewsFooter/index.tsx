@@ -1,10 +1,10 @@
 import React from 'react';
 import classes from "./NewsFooter.module.scss"
 import Loader from "../@UI/Loader";
-import {FooterAPI} from "../../sevices/FooterService";
+import {footerAPI} from "../../sevices/FooterService";
 
 const Index = () => {
-    const {data: text, isLoading} = FooterAPI.useFetchAllNewsFooterQuery('')
+    const {data: text, isLoading} = footerAPI.useFetchAllNewsFooterQuery('')
     return (
         <div className={classes.FooterNews}>
             {isLoading

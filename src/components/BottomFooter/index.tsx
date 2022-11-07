@@ -1,13 +1,13 @@
 import React from 'react';
-import {FooterAPI} from "../../sevices/FooterService";
+import {footerAPI} from "../../sevices/FooterService";
 import classes from "./FooterBottom.module.scss";
 import Loader from "../@UI/Loader";
 import Line from "../@UI/Line";
 
 const Index = () => {
-    const {data: main, isLoading} = FooterAPI.useFetchAllBottomFooterQuery('')
-    const {data: page} = FooterAPI.useFetchAllPagesFooterQuery('')
-    const {data: country} = FooterAPI.useFetchAllCountryFooterQuery('')
+    const {data: main, isLoading} = footerAPI.useFetchAllBottomFooterQuery('')
+    const {data: page} = footerAPI.useFetchAllPagesFooterQuery('')
+    const {data: country} = footerAPI.useFetchAllCountryFooterQuery('')
     return (
         <div className={classes.BottomFooter}>
             {isLoading

@@ -2,24 +2,31 @@ import React from 'react';
 import {testAPI} from "../../sevices/test";
 import Layout from "../../components/@UI/Layout";
 import Representation from "../../components/Representation";
-import ImgCover from "../../assets/images/pages/home/phone14.png"
+// import ImgCover from "/img/pages/home/phone14.png"
+import {homeAPI} from "../../sevices/HomeService";
 
 const Index = () => {
-    const {data: test, isLoading, error} = testAPI.useFetchAllTestQuery('')
+    const {data: representation, isLoading, error} = homeAPI.useFetchAllRepresentationQuery('')
 
     return (
         <Layout>
-            <Representation
-                imgUrl={ImgCover}
-                textBig={'iPhone 14'}
-                textMedium={'Big and bigger.'}
-                firstLink={'Learn more'}
-                lastLink={'Buy'}
-                textSubTitle={'ULTRA'}
-                colorSubTitle={'orange'}
-                firstLinkTo={'/'}
-                lastLinkTo={'/mac'}
-            />
+            {representation && representation.map((representation, index) =>
+                <Representation
+                    key={index}
+                    mainColor={representation.mainColor}
+                    logo={representation.logo}
+                    textBig={representation.textBig}
+                    textSubTitle={representation.textSubTitle}
+                    colorSubTitle={representation.colorSubTitle}
+                    textMedium={representation.textMedium}
+                    firstLink={representation.firstLink}
+                    lastLink={representation.lastLink}
+                    firstLinkTo={representation.firstLinkTo}
+                    lastLinkTo={representation.lastLinkTo}
+                    imgUrl={representation.imgUrl}
+                />
+            )}
+            {/*<img src={ImgCover} alt=""/>*/}
         </Layout>
     );
 };

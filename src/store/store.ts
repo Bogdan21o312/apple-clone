@@ -1,12 +1,14 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
 import {testAPI} from "../sevices/test";
 import {navbarAPI} from "../sevices/NavbarService";
-import {FooterAPI} from "../sevices/FooterService";
+import {footerAPI} from "../sevices/FooterService";
+import {homeAPI} from "../sevices/HomeService";
 
 const rootReducer = combineReducers({
     [testAPI.reducerPath]: testAPI.reducer,
     [navbarAPI.reducerPath]: navbarAPI.reducer,
-    [FooterAPI.reducerPath]: FooterAPI.reducer,
+    [footerAPI.reducerPath]: footerAPI.reducer,
+    [homeAPI.reducerPath]: homeAPI.reducer,
 })
 
 export const setupStore = () => {

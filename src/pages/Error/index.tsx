@@ -4,7 +4,7 @@ import Layout from "../../components/@UI/Layout";
 const Index = () => {
     return (
         <Layout>
-           Error
+           Error 404
         </Layout>
     );
 };

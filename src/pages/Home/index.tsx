@@ -1,5 +1,4 @@
 import React from 'react';
-import {testAPI} from "../../sevices/test";
 import Layout from "../../components/@UI/Layout";
 import Representation from "../../components/Representation";
 // import ImgCover from "/img/pages/home/phone14.png"

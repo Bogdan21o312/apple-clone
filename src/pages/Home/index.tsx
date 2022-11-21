@@ -25,7 +25,6 @@ const Index = () => {
                     imgUrl={representation.imgUrl}
                 />
             )}
-            {/*<img src={ImgCover} alt=""/>*/}
         </Layout>
     );
 };
